@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import DeptBar from './components/DeptBar';
+import Home from './pages/Home';
+import DeptCalendar from './pages/DeptCalendar';
+import MyCalendar from './pages/MyCalendar';
+import Guard from './components/Guard';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar />
+      <DeptBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dept/:deptId" element={<DeptCalendar />} />
+        <Route path="/me" element={<Guard><MyCalendar /></Guard>} />
+      </Routes>
     </div>
   );
 }
-
-export default App;

@@ -1,0 +1,41 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "dept_name": "컴퓨터정보계열"
+    },
+    {
+      "id": 2,
+      "dept_name": "간호학과"
+    },
+    {
+      "id": 3,
+      "dept_name": "건축과"
+    },
+    {
+      "id": 4,
+      "dept_name": "반도체전자계열"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "123@g.yju.ac.kr",
+      "password": "1234",
+      "displayName": "홍길동",
+      "deptId": 1
+    }
+  ],
+  "events": [
+    {
+      "id": "4787",
+      "userId": "1",
+      "title": "ㅁㄴㅇ",
+      "start": "2025-11-02",
+      "end": "2025-11-03",
+      "description": "내일정\n",
+      "scope": "PERSONAL",
+      "deptId": null
+    }
+  ]
+}
